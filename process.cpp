@@ -21,3 +21,11 @@ void Process::start(const QString &program, const QVariantList &arguments) {
 QByteArray Process::readAll() {
     return QProcess::readAll();
 }
+
+QByteArray Process::readAllStandardOutput() {
+    return QProcess::readAllStandardOutput();
+}
+
+QByteArray Process::readAllStandardError() {
+    return QProcess::readAllStandardError();
+}
