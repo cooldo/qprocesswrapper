@@ -54,7 +54,8 @@ ApplicationWindow {
             if ( process.finish == true) {
                 process.finish = false
                 console.log("process start");
-                process.start("/bin/bash",["/home/gao/test/test.sh"]);
+                //process.start("/bin/bash",["/home/gao/test/test.sh"]);
+                process.start("/bin/bash",["-c", "date | grep 2020"]);
             }
             console.log("timeup");
 
