@@ -50,11 +50,14 @@ ApplicationWindow {
         repeat: true
         triggeredOnStart: true
         running: true
+        property string myTest: "test123"
+        property string myTest1: "test123test"
         onTriggered: {
             if ( process.finish == true) {
                 process.finish = false
                 console.log("process start");
                 //process.start("/bin/bash",["/home/gao/test/test.sh"]);
+                //process.start("/home/gao/test/test.sh", [myTest, myTest1]);
                 process.start("/bin/bash",["-c", "date | grep 2020"]);
             }
             console.log("timeup");
